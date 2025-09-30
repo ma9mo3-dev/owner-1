@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تسجيل دخول المطور</title>
-  <link rel="stylesheet" href="login.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portal - تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <div class="login-container">
-    <!-- شعار خارجي -->
-    <img src="https://files.catbox.moe/6mebdc.jpg" alt="شعار الموقع" class="logo" />
-
-    <h2>مرحبًا بك أيها المطور</h2>
-    <p>سجل دخولك للبدء في رفع واجهات API الخاصة بك</p>
-
-    <form id="loginForm">
-      <input type="text" id="devName" placeholder="اكتب اسمك أو معرفك" required />
-      <button type="submit">دخول</button>
-    </form>
+    <div class="login-card">
+      <img src="https://i.imgur.com/8Km9tLL.png" alt="Logo" class="logo">
+      <h1>مرحبا بك في منصة المطورين</h1>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" id="password" placeholder="كلمة المرور" required>
+        <button type="submit">تسجيل الدخول</button>
+      </form>
+      <p>ليس لديك حساب؟ <a href="register.html">سجل الآن</a></p>
+    </div>
   </div>
 
-  <script src="login.js"></script>
+  <script src="script.js"></script>
 </body>
-      </html>
+</html>
