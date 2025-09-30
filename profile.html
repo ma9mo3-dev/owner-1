@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الملف الشخصي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="repo-container">
+    <header>
+      <h1>الملف الشخصي</h1>
+      <button onclick="goBack()">عودة للوحة التحكم</button>
+    </header>
+
+    <section class="profile-info">
+      <h2>معلومات الحساب</h2>
+      <form id="profileForm">
+        <input type="text" id="name" placeholder="الاسم الكامل" required>
+        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" id="password" placeholder="كلمة المرور الجديدة" required>
+        <button type="submit">حفظ التغييرات</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem('devUser'));
+    if (!user) {
+      alert("لم يتم تسجيل الدخول");
+      window.location.href = "index.html";
+    }
+
+    document.getElementById('name').value = user.name;
+    document.getElementById('email').value = user.email;
+    document.getElementById('password').value = user.password;
+
+    document.getElementById('profileForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      user.name = document.getElementById('name').value;
+      user.email = document.getElementById('email').value;
+      user.password = document.getElementById('password').value;
+
+      localStorage.setItem('devUser', JSON.stringify(user));
+      alert("تم تحديث معلوماتك بنجاح!");
+    });
+
+    function goBack() {
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>
