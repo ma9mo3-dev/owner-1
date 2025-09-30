@@ -1,0 +1,242 @@
+/* إعدادات عامة */
+body {
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #4e54c8;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------
+   صفحة تسجيل الدخول / التسجيل
+-------------------- */
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.login-card h1 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.login-card input[type="email"],
+.login-card input[type="password"],
+.login-card input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4e54c8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  background-color: #3b40a4;
+}
+
+/* -------------------
+   لوحة التحكم (dashboard)
+-------------------- */
+.dashboard-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'Cairo', sans-serif;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #4e54c8;
+}
+
+header button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4e54c8;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.create-repo, .repo-list, .profile-info, .api-keys {
+  margin-bottom: 30px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.create-repo h2, .repo-list h2, .profile-info h2, .api-keys h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.create-repo form input,
+.create-repo form select,
+.create-repo form button,
+.profile-info form input,
+.profile-info form button,
+.api-keys form input,
+.api-keys form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.create-repo form button,
+.profile-info form button,
+.api-keys form button {
+  background-color: #4e54c8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.repo-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.repo-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.repo-card h3 {
+  margin: 5px 0;
+}
+
+.repo-card p {
+  margin: 5px 0 10px;
+}
+
+.repo-card a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.repo-card button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* -------------------
+   صفحة repo.html
+-------------------- */
+.repo-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'Cairo', sans-serif;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.repo-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.repo-container header button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4e54c8;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.repo-info img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.repo-info p, .repo-info a {
+  margin-bottom: 10px;
+}
+
+/* مفاتيح API */
+.key-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.key-card button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
