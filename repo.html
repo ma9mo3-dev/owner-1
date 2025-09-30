@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل المستودع</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="repo-container">
+    <header>
+      <h1 id="repoName">اسم المستودع</h1>
+      <button onclick="goBack()">العودة للوحة التحكم</button>
+    </header>
+
+    <section class="repo-info">
+      <img id="repoImage" src="" alt="صورة المستودع">
+      <p id="repoDesc"></p>
+      <p>الخطة: <span id="repoPlan"></span></p>
+      <a id="repoWhatsApp" href="#" target="_blank">اذهب لحسابه على وانساب</a>
+    </section>
+
+    <section class="api-keys">
+      <h2>إدارة مفاتيح API</h2>
+      <form id="keyForm">
+        <input type="text" id="keyName" placeholder="اسم المفتاح" required>
+        <button type="submit">إنشاء مفتاح</button>
+      </form>
+      <div id="keysContainer"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
