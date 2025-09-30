@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>لوحة تحكم المطور</title>
-  <link rel="stylesheet" href="dashboard.css">
+  <title>Developer Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="dashboard-container">
+    <header>
+      <h1>لوحة التحكم للمطورين</h1>
+      <button id="logoutBtn">تسجيل الخروج</button>
+    </header>
 
-  <div class="dashboard">
-    <h1 id="welcome"></h1>
+    <section class="create-repo">
+      <h2>إنشاء مستودع جديد</h2>
+      <form id="repoForm">
+        <input type="text" id="repoName" placeholder="اسم المستودع" required>
+        <input type="text" id="repoDesc" placeholder="وصف المستودع" required>
+        <input type="url" id="repoImage" placeholder="رابط الصورة" required>
+        <select id="repoPlan">
+          <option value="free">مجاني</option>
+          <option value="paid">مدفوع</option>
+        </select>
+        <input type="url" id="repoWhatsApp" placeholder="رابط حساب وانساب">
+        <button type="submit">إنشاء المستودع</button>
+      </form>
+    </section>
 
-    <button onclick="window.location.href='new-api.html'">➕ رفع API جديدة</button>
-
-    <h2>واجهات API الخاصة بك</h2>
-    <div id="apiList" class="api-list">
-      <!-- سيتم ملء هذه القائمة تلقائيًا -->
-    </div>
+    <section class="repo-list">
+      <h2>مستودعاتك</h2>
+      <div id="reposContainer">
+        <!-- المستودعات الحقيقية ستظهر هنا -->
+      </div>
+    </section>
   </div>
 
-  <script src="dashboard.js"></script>
+  <script src="script.js"></script>
 </body>
-</html>
+  </html>
